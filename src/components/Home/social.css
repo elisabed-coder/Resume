@@ -1,0 +1,47 @@
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  cursor: pointer;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 0 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  box-shadow: inset 0 0 0 1px #3baea0;
+  border-radius: 4px;
+}
+
+.icon:hover::before {
+  box-shadow: inset 0 0 0 40px#3baea0;
+}
+
+.icon i {
+  position: relative;
+  color: #3baea0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: all 0.25s ease;
+}
+
+.icon:hover i {
+  color: #fff; /* Icon color on hover */
+}

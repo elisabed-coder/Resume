@@ -1,0 +1,209 @@
+.home__content {
+  display: grid;
+  grid-template-columns: 116px repeat(2, 1fr);
+  padding-top: 8.5rem;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.home__social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+
+.home__social-icon {
+  font-size: 1.25rem;
+}
+
+.home__data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* .home__data h3 {
+  position: relative;
+  padding-left: 5.4rem;
+  align-self: center;
+} */
+/*
+.home__data h3::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  left: 0;
+  top: 1rem;
+  background-color: black;
+} */
+
+.description {
+  font-size: var(--small-font-size);
+  color: var(--gray-color);
+}
+
+.home__img {
+  background-image: url("../../assets/Princesa-Mononoke-San-Cosplay-prova-como-a-obra-de-Miyazaki.webp");
+  box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  animation: profile_animate 8s ease-in-out infinite 1s;
+}
+
+/* =========profile animation */
+
+@keyframes profile_animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+/* ==========button animation */
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  /* text-decoration: none; */
+  padding: 15px 40px;
+  width: 240px;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+  font-weight: var(--font-bold);
+  font-size: var(--normal-font-size);
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: var(--dark-blue-color);
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .home__content {
+    padding-top: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .home__content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img social"
+      "data data";
+    padding-top: 3.5rem;
+    column-gap: 1rem;
+    row-gap: 2rem;
+  }
+
+  .home__img {
+    grid-area: img;
+    justify-self: center;
+    width: 80%;
+  }
+
+  .home__social {
+    grid-area: social;
+    justify-self: center;
+  }
+
+  .home__data {
+    grid-area: data;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .description {
+    max-width: 80%;
+    align-self: center;
+  }
+
+  .btn {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .home__content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "data"
+      "social";
+    padding-top: 3.5rem;
+    justify-items: center;
+  }
+  .home__img,
+  .home__data,
+  .home__social {
+    grid-area: auto;
+    justify-self: center;
+    text-align: center;
+  }
+  .home__img {
+    order: -1;
+  }
+
+  .home__social {
+    order: 1;
+  }
+}
