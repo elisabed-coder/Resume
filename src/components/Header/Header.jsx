@@ -7,10 +7,11 @@ const Header = () => {
   return (
     <>
       <header>
-        <nav>
+        <nav aria-label="Main Navigation">
           <a
             href="index.html"
             className={Toggle ? "nav__logo hide" : "nav__logo"}
+            aria-label="Home"
           >
             BEZHIASHVILI
           </a>
