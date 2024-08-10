@@ -40,7 +40,7 @@
 
 .description {
   font-size: var(--small-font-size);
-  color: var(--gray-color);
+  color: var(--light-gray-color);
 }
 
 .home__img {

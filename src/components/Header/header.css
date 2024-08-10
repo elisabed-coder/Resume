@@ -3,12 +3,12 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 2rem;
-  background: #ffff;
+  background: var(--dark-blue-color);
   z-index: 5;
 }
 
 nav {
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +18,7 @@ nav {
 nav > a {
   font-size: var(--big-font-size);
   font-weight: var(--font-bold);
-  color: var(--black-color);
+  /* color: var(--black-color); */
 }
 ul {
   display: flex;
@@ -74,7 +74,7 @@ ul {
     border-top-right-radius: 1.5rem;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.35);
     transition: bottom 0.3s ease;
-    background: white;
+    background: var(--dark-blue-color);
   }
   .nav__close,
   .nav__toggle,
@@ -109,7 +109,6 @@ ul {
 @media screen and (max-width: 450px) {
   .nav__menu {
     padding: 2rem 0.25rem 4rem;
-    background-color: var(--white-color);
   }
 
   header {

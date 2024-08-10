@@ -8,13 +8,13 @@ import Contact from "./components/Contact/Contact";
 const App = () => {
   return (
     <>
-      <Header />
-      <main className="main">
+      <div className="w-hidden bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+        <Header />
         <Home />
-      </main>
-      <Skills />
-      <Portfolio />
-      <Contact />
+        <Skills />
+        <Portfolio />
+        <Contact />
+      </div>
     </>
   );
 };
