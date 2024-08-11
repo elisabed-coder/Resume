@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 import "../Home/social.css";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   // const [formData, setFormData] = useState({
@@ -71,12 +72,31 @@ const Contact = () => {
 
   return (
     <section className="section contact container" id="contact">
-      <h1>Get in Touch</h1>
-      <h2>Chat with me</h2>
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.7 }}
+        className="section__title"
+      >
+        Get in Touch
+      </motion.h1>
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="section__subtitle"
+      >
+        Chat with me
+      </motion.h2>
       {!isFormSubmitted ? (
         <div className="contact__container flex-center ">
-          <div className="icons__container">
-            <div className="email__container ">
+          <motion.div
+            className="icons__container"
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="email__container">
               <a
                 href=""
                 className="icon"
@@ -98,8 +118,13 @@ const Contact = () => {
               </a>
               <h3>+995 551 071 649</h3>
             </div>
-          </div>
-          <div className="project__content">
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            transition={{ duration: 0.7 }}
+            className="project__content"
+          >
             <form ref={form} onSubmit={sendEmail}>
               <div className="input__box">
                 <input type="text" name="name" required />
@@ -113,17 +138,21 @@ const Contact = () => {
                 <textarea type="text" name="message" required></textarea>
                 <span>Your Message</span>
               </div>
-              <button className="button" id="button-3" type="submit">
+              <motion.button className="button" id="button-3" type="submit">
                 <div id="circle"></div>
                 <p>{loading ? "Sending..." : "Send Message"}</p>
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
         </div>
       ) : (
-        <div>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="head__text">Thank you for getting in touch!</h2>
-        </div>
+        </motion.div>
       )}
     </section>
   );

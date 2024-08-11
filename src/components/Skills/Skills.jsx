@@ -1,5 +1,6 @@
 import React from "react";
 import "./skills.css";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
@@ -7,7 +8,12 @@ const Skills = () => {
       <section className="section" id="skills">
         <h1>Junior Frontend Developer</h1>
         <div className="skills__container">
-          <ul className="skills_box">
+          <motion.ul
+            className="skills_box"
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2>HARD SKILLS</h2>
 
             <li> HTML/CSS</li>
@@ -18,9 +24,14 @@ const Skills = () => {
             <li>ANGULAR</li>
             <li>MYSQL</li>
             <li>Database/API Integration</li>
-          </ul>
+          </motion.ul>
 
-          <ul className="skills_box">
+          <motion.ul
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.5 }}
+            className="skills_box"
+          >
             <h2>SOFT SKILLS</h2>
             <li>Attention to Detail</li>
             <li>Problem Solving and Critical Thinking </li>
@@ -32,7 +43,7 @@ const Skills = () => {
             <li>Continuous Learning and Improvement </li>
             <li>Customer Service and User Experience Focus </li>
             <li>Patience and Perseverance</li>
-          </ul>
+          </motion.ul>
         </div>
       </section>
     </>

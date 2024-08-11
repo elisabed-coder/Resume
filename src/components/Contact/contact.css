@@ -1,5 +1,5 @@
 .contact {
-  padding-bottom: 20rem;
+  padding-bottom: 3rem;
 }
 
 .contact__container {
@@ -145,6 +145,13 @@ p {
 
 #button-3:hover p {
   color: #2d3142;
+}
+
+/* ========RESPONSIVE LAYOUT */
+@media screen and (max-width: 1050px) {
+  .contact {
+    padding-bottom: 10.5rem;
+  }
 }
 
 @media screen and (max-width: 820px) {
