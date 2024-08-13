@@ -6,7 +6,13 @@ const Skills = () => {
   return (
     <>
       <section className="section" id="skills">
-        <h1>Junior Frontend Developer</h1>
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.7 }}
+        >
+          Junior Frontend Developer
+        </motion.h1>
         <div className="skills__container">
           <motion.ul
             className="skills_box"

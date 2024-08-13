@@ -20,7 +20,7 @@ const Header = () => {
             <ul>
               <li>
                 <a href="#home" className="nav__link">
-                  <i className="uil uil-estate nav__icon"></i>Home
+                  <i className="uil uil-estate nav__icon"></i>Home<span></span>
                 </a>
               </li>
               {/* <li>
@@ -29,8 +29,15 @@ const Header = () => {
                 </a>
               </li> */}
               <li>
+                <a href="#education" className="nav__link">
+                  <i class="uil uil-graduation-cap nav__icon"></i>Education
+                  <span></span>
+                </a>
+              </li>
+              <li>
                 <a href="#skills" className="nav__link">
                   <i className="uil uil-file-alt nav__icon"></i>Skills
+                  <span></span>
                 </a>
               </li>
               {/* <li>
@@ -41,11 +48,13 @@ const Header = () => {
               <li>
                 <a href="#portfolio" className="nav__link">
                   <i className="uil uil-bag-alt nav__icon"></i>Portfolio
+                  <span></span>
                 </a>
               </li>
               <li>
                 <a href="#contact" className="nav__link">
                   <i className="uil uil-message nav__icon"></i>Contact
+                  <span></span>
                 </a>
               </li>
             </ul>

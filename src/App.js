@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
+import Education from "./components/Education/Education";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <div className="overflow-x-hidden bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
         <Header />
         <Home />
+        <Education />
         <Skills />
         <Portfolio />
         <Contact />

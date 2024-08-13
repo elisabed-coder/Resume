@@ -125,9 +125,11 @@ section h2 {
   --light-gray-color: #ececece6;
   --light-turquoise-color: #9fd3c7;
   --dark-turquoise-color: #3baea0;
+  --darker-turquoise-color: #145850;
   --white-color: #fff;
   --dark-blue: #222;
   --green: #90feb5;
+  --pink: #ffb5b5;
 }
 
 @media screen and (max-width: 992px) {
@@ -140,7 +142,7 @@ section h2 {
     --normal-font-size: 1rem;
     --medium-font-size: 22px;
     --small-font-size: 16px;
-    --smaller-font-size: 0.75px;
+    --smaller-font-size: 14px;
   }
 }
 
@@ -153,6 +155,6 @@ section h2 {
     --medium-font-size: 20px;
     --medium-font-size: 0.538px;
     --small-font-size: 16px;
-    --smaller-font-size: 0.55px;
+    --smaller-font-size: 14px;
   }
 }

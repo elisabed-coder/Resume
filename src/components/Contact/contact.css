@@ -52,6 +52,7 @@ form {
 
 .input__box textarea {
   height: 7rem;
+  resize: none;
 }
 
 .input__box span {

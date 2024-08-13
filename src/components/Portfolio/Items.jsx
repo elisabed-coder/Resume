@@ -15,22 +15,20 @@ const Items = ({ projectItems }) => {
             exit={{ opacity: 0.8, scale: 0.6 }}
             transition={{ duration: 0.4 }}
             key={id}
-            className="portfolio__items card"
+            className={`portfolio__items card card-${id}`}
           >
             <div className="portfolio__img-wrapper">
               <img src={img} alt={title} className="portfolio__img" />
             </div>
 
             <span className="portfolio__category text-cs">{category}</span>
-            <h3 className="portfolio__title">{title}</h3>
+            <h2 className="section__subtitle">{title}</h2>
             <p className="portfolio__description">{description}</p>
 
             <a href="" className="link">
               See Details
               <i className="uil uil-arrow-right"></i>
             </a>
-
-            {/* <img src="{shapeTwo}" alt="" className="shape c__shape" /> */}
           </motion.div>
         );
       })}

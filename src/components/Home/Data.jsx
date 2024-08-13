@@ -36,7 +36,7 @@ const Data = () => {
         and utilize my coding and debugging skills for developing new features
         and enhance the overall user experience.
       </motion.p>
-      <motion.a
+      <a
         href="#contact"
         className=" btn btn-white btn-animate flex-center"
         variants={container(1.1)}
@@ -48,7 +48,7 @@ const Data = () => {
           className="uil uil-message 
       "
         ></i>
-      </motion.a>
+      </a>
     </motion.div>
   );
 };
