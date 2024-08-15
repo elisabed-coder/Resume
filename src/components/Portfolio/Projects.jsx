@@ -10,6 +10,7 @@ export const Projects = [
     title: "Multi Step Form",
     description:
       "Multistep Form Application , where users can: Complete each step of the sequence, Go back to a previous step to update their selections, See a summary of their selections on the final step and confirm their order",
+    link: "https://registration-multistepform.vercel.app/",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const Projects = [
     title: "Task Managment",
     description:
       "This Project has 3 section: Posts, Album and to-dos Posts: using Json placeholder api to get posts, user also can create, update, delete Post and comments. Albums: using Json placehodler api to get data. Todos: user can change status of toDo.",
+    link: "https://task-managment-9sfr.onrender.com",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ export const Projects = [
     title: "Honey Movies",
     description:
       "Honey movies web app, using omdbapi.com , user can search movies",
+    link: "https://honey-movies-mu.vercel.app",
   },
 ];
 

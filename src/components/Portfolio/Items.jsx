@@ -6,7 +6,7 @@ const Items = ({ projectItems }) => {
   return (
     <>
       {projectItems.map((projectItem) => {
-        const { id, img, category, title, description } = projectItem;
+        const { id, img, category, title, description, link } = projectItem;
         return (
           <motion.div
             layout
@@ -25,8 +25,13 @@ const Items = ({ projectItems }) => {
             <h2 className="section__subtitle">{title}</h2>
             <p className="portfolio__description">{description}</p>
 
-            <a href="" className="link">
-              See Details
+            <a
+              href={link}
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Go to the Website
               <i className="uil uil-arrow-right"></i>
             </a>
           </motion.div>

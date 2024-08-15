@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
   visible: {

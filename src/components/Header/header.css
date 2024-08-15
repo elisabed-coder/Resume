@@ -3,12 +3,16 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--dark-blue-color);
   z-index: 5;
+  transition: background-color 0.3s ease;
+}
+
+header.scrolling {
+  background-color: var(--dark-blue-color);
 }
 
 nav {
-  padding: 2rem;
+  padding: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,6 +53,9 @@ ul {
   padding: 0.5rem;
 }
 
+.nav__link.active {
+  color: #0ef;
+}
 .nav__link:hover {
   color: #0ef;
 }
@@ -90,6 +97,7 @@ ul {
   header {
     top: initial;
     bottom: 0;
+    background-color: var(--dark-blue-color);
   }
   nav {
     width: 100%;

@@ -1,9 +1,14 @@
+.home {
+  margin: 0 auto;
+}
 .home__content {
   display: grid;
   grid-template-columns: 116px repeat(2, 1fr);
   padding-top: 8.5rem;
   column-gap: 2rem;
   align-items: center;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .home__social {
@@ -46,7 +51,7 @@
 .home__img {
   background-image: url("../../assets/Princesa-Mononoke-San-Cosplay-prova-como-a-obra-de-Miyazaki.webp");
   box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
-  width: 300px;
+  width: 400px;
   height: 300px;
   background-position: center;
   animation: profile_animate 8s ease-in-out infinite 1s;
@@ -158,7 +163,6 @@
   .home__img {
     grid-area: img;
     justify-self: center;
-    width: 80%;
   }
 
   .home__social {
