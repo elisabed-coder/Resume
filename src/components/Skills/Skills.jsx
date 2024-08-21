@@ -31,12 +31,12 @@ const Skills = () => {
         {skillsData.map((skill, index) => {
           const isLeft = index % 2 === 0;
           return (
-            <motion.div
+            <div
               key={index}
-              className="skills__block"
-              initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
+              // className="skills__block"
+              // initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
+              // whileInView={{ opacity: 1, x: 0 }}
+              // transition={{ duration: 0.7 }}
             >
               <h2 className="skill__name">{skill.name}</h2>
               <div className="skills__box">
@@ -81,7 +81,7 @@ const Skills = () => {
                   />
                 </motion.svg>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </motion.div>

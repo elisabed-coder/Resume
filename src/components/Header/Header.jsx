@@ -14,7 +14,7 @@ const Header = () => {
 
       sections.forEach((current) => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 148; // Adjust based on your header height
+        const sectionTop = current.offsetTop - 95; // Adjust based on your header height
         const sectionId = current.getAttribute("id");
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
