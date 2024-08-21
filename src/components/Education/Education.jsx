@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./education.css";
 import { motion } from "framer-motion";
 import Educationdata from "./Educationdata";

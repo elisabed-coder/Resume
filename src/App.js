@@ -5,6 +5,7 @@ import Skills from "./components/Skills/Skills";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
 import Education from "./components/Education/Education";
+import { motion, useScroll } from "framer-motion";
 
 const App = () => {
   return (

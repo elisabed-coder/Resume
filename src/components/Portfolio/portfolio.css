@@ -16,6 +16,10 @@
   gap: 40px;
 }
 
+.portofilio__subtitle {
+  text-align: center;
+}
+
 .portfolio__img-wrapper {
   border-radius: 18px;
   overflow: hidden;

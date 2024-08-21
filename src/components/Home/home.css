@@ -1,6 +1,17 @@
 .home {
   margin: 0 auto;
 }
+
+.home__title {
+  text-align: flex-start;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+}
+
+.home__subtitle {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+}
 .home__content {
   display: grid;
   grid-template-columns: 116px repeat(2, 1fr);

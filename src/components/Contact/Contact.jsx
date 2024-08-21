@@ -84,7 +84,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="section__subtitle"
+        className="section__subtitle contact__subtitle"
       >
         Chat with me
       </motion.h2>

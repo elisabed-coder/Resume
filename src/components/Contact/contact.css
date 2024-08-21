@@ -5,6 +5,9 @@
 .contact__container {
   gap: 5rem;
 }
+.contact__subtitle {
+  text-align: center;
+}
 
 .icons__container {
   display: flex;

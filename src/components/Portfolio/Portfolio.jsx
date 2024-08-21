@@ -14,7 +14,7 @@ console.log(AllNavList);
 
 const Portfolio = () => {
   const [projectItems, setMenuItems] = useState(Projects);
-  const [navList, setCategory] = useState(AllNavList);
+  const navList = AllNavList;
 
   const filterItems = (category) => {
     if (category === "all") {
@@ -42,7 +42,7 @@ const Portfolio = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="section__subtitle"
+        className="section__subtitle portofilio__subtitle"
       >
         My cases
       </motion.h2>
