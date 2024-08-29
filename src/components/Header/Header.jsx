@@ -14,7 +14,7 @@ const Header = () => {
 
       sections.forEach((current) => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 95; // Adjust based on your header height
+        const sectionTop = current.offsetTop - 205;
         const sectionId = current.getAttribute("id");
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -37,15 +37,16 @@ const Header = () => {
     };
   }, []);
 
+  const handleNavClick = (navId) => {
+    setActiveNav(navId);
+    showMenu(false); // Close the menu when a link is clicked
+  };
+
   return (
     <>
       <header className={scrolling ? "scrolling" : ""}>
         <nav aria-label="Main Navigation">
-          <a
-            href="index.html"
-            className={Toggle ? "nav__logo hide" : "nav__logo"}
-            aria-label="Home"
-          >
+          <a href="index.html" className="nav__logo" aria-label="Home">
             BEZHIASHVILI
           </a>
 
@@ -57,7 +58,7 @@ const Header = () => {
                   className={
                     activeNav === "#home" ? "nav__link active" : "nav__link"
                   }
-                  onClick={() => setActiveNav("#home")}
+                  onClick={() => handleNavClick("#home")}
                 >
                   <i className="uil uil-estate nav__icon"></i>Home<span></span>
                 </a>
@@ -70,7 +71,7 @@ const Header = () => {
                       ? "nav__link active"
                       : "nav__link"
                   }
-                  onClick={() => setActiveNav("#education")}
+                  onClick={() => handleNavClick("#education")}
                 >
                   <i className="uil uil-graduation-cap nav__icon"></i>Education
                   <span></span>
@@ -82,7 +83,7 @@ const Header = () => {
                   className={
                     activeNav === "#skills" ? "nav__link active" : "nav__link"
                   }
-                  onClick={() => setActiveNav("#skills")}
+                  onClick={() => handleNavClick("#skills")}
                 >
                   <i className="uil uil-file-alt nav__icon"></i>Skills
                   <span></span>
@@ -96,7 +97,7 @@ const Header = () => {
                       ? "nav__link active"
                       : "nav__link"
                   }
-                  onClick={() => setActiveNav("#portfolio")}
+                  onClick={() => handleNavClick("#portfolio")}
                 >
                   <i className="uil uil-bag-alt nav__icon"></i>Portfolio
                   <span></span>
@@ -108,7 +109,7 @@ const Header = () => {
                   className={
                     activeNav === "#contact" ? "nav__link active" : "nav__link"
                   }
-                  onClick={() => setActiveNav("#contact")}
+                  onClick={() => handleNavClick("#contact")}
                 >
                   <i className="uil uil-message nav__icon"></i>Contact
                   <span></span>
@@ -118,13 +119,10 @@ const Header = () => {
 
             <i
               className="uil uil-times nav__close"
-              onClick={() => showMenu(!Toggle)}
+              onClick={() => showMenu(false)}
             ></i>
           </div>
-          <div
-            className={Toggle ? "nav__toggle hide" : "nav__toggle"}
-            onClick={() => showMenu(!Toggle)}
-          >
+          <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
             <i className="uil uil-apps"></i>
           </div>
         </nav>
